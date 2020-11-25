@@ -79,7 +79,7 @@ namespace EmailDadJoke
         /// <returns>the data from the requrst</returns>
          private async Task<int> POSTData(string jsonStr, string url)
         {
-            using (var content = new StringContent(jsonStr, System.Text.Encoding.UTF8, "application/jsonStr"))
+            using (var content = new StringContent(jsonStr, System.Text.Encoding.UTF8, "application/json"))
             {
                 HttpResponseMessage result = httpClient.PostAsync(url, content).Result;
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
